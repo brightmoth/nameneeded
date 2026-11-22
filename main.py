@@ -19,19 +19,20 @@ user_options = ["1. View Profile",
 
 while continue_running:
     account_name = input("Enter admin or user: ")
-    admin_password = input("Enter admin account password: ")
-    user_password = input("Enter user account password: ")
 
-    if account_name == "admin" and admin_password == "":
-        print("Welcome, admin!")
-        # Admin Thingys
-        for option in admin_options:
-            print(option)
-    elif account_name == "user" and user_password == "":
-        print("Welcome, user!")
-        # User Thingys
-        for option in user_options:
-            print(option)
+    if account_name == "admin":
+        print("admin account has been chosen, please entern the password")
+        admin_password = input("Enter the admin password: ")
+        if admin_password == "":
+            # Admin Thingys
+            for option in admin_options:
+                print(option)
+    elif account_name == "user":
+        user_password = input("Enter the user password: ")
+        if user_password == "":
+            # User Thingys
+            for option in user_options:
+                    print(option)
     else:
         print("This is an invalid account name. Please enter 'admin' or 'user'.")
         account_name = input("Enter admin or user: ")
