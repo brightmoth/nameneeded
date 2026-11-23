@@ -1,5 +1,5 @@
 # Imports
-
+import csv
 
 # Named Variables
 continue_running = True
@@ -23,13 +23,18 @@ def admin_option_3():
 
 # User
 user_options = [
-    "1. View Profile",
-    "2. Edit Profile",
+    "1. Create Company Account",
+    "2. Create User",
     "3. Logout"
 ]
 
 def user_option_1():
-    print("Success")
+    company = input("What is the company name? ")
+    with open("company.csv", mode="a", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow([company])
+
+    print("Company Name Added Successfully!")
 
 def user_option_2():
     print("Success")
