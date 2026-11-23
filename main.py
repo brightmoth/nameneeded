@@ -11,7 +11,15 @@ admin_options = [
     "3. Delete User"
 ]
 
-admin_option_1 = "Success"
+def admin_option_1():
+    print("Success")
+
+def admin_option_2():
+    print("Success")
+
+def admin_option_3():
+    print("Success")
+
 
 # User
 user_options = [
@@ -20,7 +28,14 @@ user_options = [
     "3. Logout"
 ]
 
-user_option_1 = "Success"
+def user_option_1():
+    print("Success")
+
+def user_option_2():
+    print("Success")
+
+def user_option_3():
+    print("Success")
 
 
 # Code
@@ -40,7 +55,16 @@ while continue_running:
             admin_choice = int(input("Please enter the number of the option you choose: "))
 
             if admin_choice == 1:
-                print(admin_option_1)
+                admin_option_1()
+
+            elif admin_choice == 2:
+                admin_option_2()
+
+            elif admin_choice == 3:
+                admin_option_3()
+
+            else:
+                print("Failed")
 
     elif account_name == "user":
         user_password = input("Enter the user password: ")
@@ -53,7 +77,16 @@ while continue_running:
             user_choice = int(input("Please enter the number of the option you choose: "))
 
             if user_choice == 1:
-                print(user_option_1)
+                user_option_1()
+
+            elif user_choice == 2:
+                user_option_2()
+
+            elif user_choice == 3:
+                user_option_3()
+
+            else:
+                print("Failed")
 
     else:
         print("This is an invalid account name. Please enter 'admin' or 'user'.")
