@@ -37,7 +37,12 @@ def user_option_1():
     print("Company Name Added Successfully!")
 
 def user_option_2():
-    print("Success")
+    username = input("What is the username? ")
+    with open("user.csv", mode="a", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow([username])
+
+        print("User Added Successfully!")
 
 def user_option_3():
     print("Success")
