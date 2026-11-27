@@ -7,15 +7,28 @@ continue_running = True
 # Admin
 admin_options = [
     "1. View Users",
-    "2. Add User",
+    "2. Verify User",
     "3. Delete User"
 ]
 
 def admin_option_1():
-    print("Success")
+    with open("users.csv", "r", encoding="utf-8") as f:
+        content = f.read()
+        print(content)
+
 
 def admin_option_2():
-    print("Success")
+    with open("user.csv", "r", encoding="utf-8") as f:
+        print(f.read())
+
+    choice = input("Enter the username to approve: ").strip()
+
+    if choice in username:
+        username[choice]["approved"] = True
+        print(f"{choice} is now approved")
+    else:
+        print("User not found")
+
 
 def admin_option_3():
     print("Success")
