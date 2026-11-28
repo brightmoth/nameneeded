@@ -4,6 +4,9 @@ import csv
 # Named Variables
 continue_running = True
 
+path_to_users = "/users.csv"
+path_to_companys = "/company.csv"
+
 # Admin
 admin_options = [
     "1. View Users",
@@ -12,19 +15,19 @@ admin_options = [
 ]
 
 def admin_option_1():
-    with open("users.csv", "r", encoding="utf-8") as f:
+    with open(path_to_users, "r", encoding="utf-8") as f:
         content = f.read()
         print(content)
 
 
 def admin_option_2():
-    with open("user.csv", "r", encoding="utf-8") as f:
+    with open(path_to_users, "r", encoding="utf-8") as f:
         print(f.read())
 
     choice = input("Enter the username to approve: ").strip()
 
-    if choice in username:
-        username[choice]["approved"] = True
+    if choice in choice:
+        choice[choice]["approved"] = True
         print(f"{choice} is now approved")
     else:
         print("User not found")
